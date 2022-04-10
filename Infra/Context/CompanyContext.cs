@@ -19,6 +19,8 @@ namespace CompanyManager.Infra.Context
         }
 
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+        public DbSet<Position> Positions { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=CompanyManager;Integrated Security=True");

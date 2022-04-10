@@ -6,20 +6,21 @@ using System.Threading.Tasks;
 
 namespace CompanyManager.Models
 {
-    public class Company
+    public class Employee
     {
         [Key]
         public int Id { get; set; }
         [Required]
         public string Name { get; set; }
         [Required]
-        public string CNPJ { get; set; }
+        public string RegistrationNumber { get; set; }
         [Required]
-        public string Endereco { get; set; }
+        public int CompanyId { get; set; }
         [Required]
-        public string Email { get; set; }
-        public IEnumerable<Employee> Employees { get; set; }
-        public IEnumerable<Position> Positions { get; set; }
-
+        public Company Company { get; set; }
+        [Required]
+        public int PositionId { get; set; }
+        [Required]
+        public Position Position { get; set; }
     }
 }
