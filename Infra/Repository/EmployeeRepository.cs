@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace CompanyManager.Infra.Repository
 {
-    public class PositionRepository : GenericRepository<Position>, IPositionRepository
+    public class EmployeeRepository : GenericRepository<Employee>, IEmployeeRepository
     {
-        public PositionRepository(CompanyContext companyContext): base(companyContext)
+        public EmployeeRepository(CompanyContext companyContext) : base(companyContext)
         {
 
         }
